@@ -1,3 +1,24 @@
 {
-  "extends": "next/core-web-vitals"
+  "plugins": ["@typescript-eslint", "prettier", "simple-import-sort"],
+  "extends": [
+    "next/core-web-vitals",
+    "plugin:@typescript-eslint/recommended",
+    "prettier"
+  ],
+  "rules": {
+    "simple-import-sort/imports": "error",
+    "simple-import-sort/exports": "error",
+    "prettier/prettier": "error",
+    "indent": "off",
+    "no-var": "warn",
+    "linebreak-style": ["warn", "unix"],
+    "quotes": ["error", "single"],
+    "semi": ["warn", "always"],
+    "object-shorthand": ["error", "always"],
+    "object-curly-spacing": ["warn", "always"],
+    "@typescript-eslint/no-unused-vars": "warn",
+    "@typescript-eslint/no-explicit-any": "error",
+    "arrow-body-style": "off",
+    "prefer-arrow-callback": "off"
+  }
 }

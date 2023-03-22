@@ -1,0 +1,16 @@
+.create{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .selects{
+        display: flex;
+        justify-content: space-between;
+        min-width: 50%;
+        .select{
+            margin: 10px;
+        }
+    }
+}
+.headings{
+    height: 130px;
+}

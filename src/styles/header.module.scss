@@ -1,0 +1,9 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    @media (max-width:750px) {
+        flex-direction: column;
+    }
+}
