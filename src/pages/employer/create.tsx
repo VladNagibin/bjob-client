@@ -55,11 +55,11 @@ export default function Add() {
   const [loading, setLoading] = useState(false);
 
   const handleContract = (e: React.ChangeEvent<HTMLInputElement>) => {
-    let { name, value } = e.target;
-    if (name === 'paymentAmount') {
+    let { value } = e.target;
+    if (e.target.name === 'paymentAmount') {
       value = value.replace(/[^\d.]/g, '');
     }
-    setContract(prev => ({ ...prev, [name]: value }));
+    setContract(prev => ({ ...prev, [e.target.name]: value }));
   };
   const handleRate = (event: Event, value: number | number[]) => {
     value = Array.isArray(value) ? value[0] : value;

@@ -24,6 +24,7 @@ export default function useOffer({ address, eventCallback }: IUseOfferProps) {
     if (!chainId || !wallet) {
       return;
     }
+    //eslint-disable-next-line
     //@ts-ignore
     const offer = new web3.eth.Contract(abi, address, {
       from: wallet,

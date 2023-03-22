@@ -24,6 +24,7 @@ export default function useFactory() {
     if (!address) {
       return;
     }
+    //eslint-disable-next-line
     //@ts-ignore
     const factory = new web3.eth.Contract(abi, address, {
       from: wallet,
