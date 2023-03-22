@@ -95,7 +95,7 @@ export default function ContractElement({
         </Typography>
       </div>
       <div className={styles.buttonWrapper}>
-        <Button variant="contained" href={`/contract/${address}`}>
+        <Button variant="contained" href={`/contract?address=${address}`}>
           Open
         </Button>
       </div>

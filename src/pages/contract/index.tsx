@@ -6,9 +6,10 @@ import NoContractFound from '@/components/contract/NoContractFound';
 
 export default function ContractPage() {
   const router = useRouter();
-  const { id } = router.query;
-  if (!id || Array.isArray(id)) {
+  const { address } = router.query;
+  console.log(router);
+  if (!address || Array.isArray(address)) {
     return <NoContractFound />;
   }
-  return <Contract address={id as string} />;
+  return <Contract address={address as string} />;
 }
