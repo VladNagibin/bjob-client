@@ -1,38 +1,60 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+# Bjob-client
 
-First, run the development server:
+Simple SSG client for JobOfferFactory smart contract based on NextJS and Web3JS
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+More info about smart contract here 
+https://github.com/VladNagibin/bjob-server
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## FAQ
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+#### How to create Job offer?
 
-## Learn More
+    1)Choose "I am employer" on main screen
+    2)Fund JobOfferFactory on some amount of ETH
+    3)Click create
+    4)Set your settings and click "Create job offer"
 
-To learn more about Next.js, take a look at the following resources:
+#### What settings I can set to job offer?
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+    1)Amount - payment amount that gonna be paid to the employee
+    2)Address - employee's address
+    3)Currency - in which currency amount is set. 
+    payment will goes in native currency of chain but if you choose USD or EUR, 
+    each payment gonna be count by the currency/native currency rate
+    4)Payment rate - number of days that should be passed between payments
+    5)Contract type - can be hourly or salary. 
+    Salary - each payment equals amount. 
+    Hourly - each payment equals worked hours * amount
+    6)Keeper compatible - if true, each month system will check
+    if your contract requires payment and will do that automatically
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+#### How to accept job offer?
+    1)Choose "I am employee" on main screen
+    2)Find and open job offer
+    3)Click sign
 
-## Deploy on Vercel
+#### How to receive payment from job offer?
+##### Salary Contract
+    1)Payment should be provided by employer 
+    so open job offer as employer
+    2)Click pay
+##### Hourly Contract
+    1)Payment should be provided by employee 
+    so open job offer as employee
+    2)Enter your worked hours
+    3)Click add worked hours
+    4)Click pay worked hours
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+
+## Demo
+
+Smart contract deployed on Mumbai, Sepolia and Goerli testnets
+and use Metamask as provider so you can play with it here 
+https://bjob.on.fleek.co/
+
