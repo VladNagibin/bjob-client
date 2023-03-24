@@ -7,8 +7,6 @@ More info about smart contract here
 https://github.com/VladNagibin/bjob-server
 
 
-
-
 ## FAQ
 
 #### How to create Job offer?
@@ -20,11 +18,11 @@ https://github.com/VladNagibin/bjob-server
 
 #### What settings I can set to job offer?
 
-    1)Amount - payment amount that gonna be paid to the employee
+    1)Amount - payment amount that is going to be paid to the employee
     2)Address - employee's address
     3)Currency - in which currency amount is set. 
-    payment will goes in native currency of chain but if you choose USD or EUR, 
-    each payment gonna be count by the currency/native currency rate
+    payment will go in native currency of chain but if you choose USD or EUR, 
+    each payment is going to be counted by the currency/native currency rate
     4)Payment rate - number of days that should be passed between payments
     5)Contract type - can be hourly or salary. 
     Salary - each payment equals amount. 
@@ -33,7 +31,7 @@ https://github.com/VladNagibin/bjob-server
     if your contract requires payment and will do that automatically
 
 #### How to accept job offer?
-    1)Choose "I am employee" on main screen
+    1)Choose "I am employee" on the main screen
     2)Find and open job offer
     3)Click sign
 
@@ -57,4 +55,11 @@ https://github.com/VladNagibin/bjob-server
 Smart contract deployed on Mumbai, Sepolia and Goerli testnets
 and use Metamask as provider so you can play with it here 
 https://bjob.on.fleek.co/
+
+### IPFS 
+hash
+QmURCM1viUXsfQmJ41NwW7kZweBxBXPK9yrNPgTzKvfvw5
+
+to run on IPFS
+https://ipfs.io/ipfs/QmURCM1viUXsfQmJ41NwW7kZweBxBXPK9yrNPgTzKvfvw5
 
